@@ -20,9 +20,11 @@ namespace Chupelupe.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
-            FirebasePushNotificationManager.ProcessIntent(this, Intent);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
+            FirebasePushNotificationManager.ProcessIntent(this, Intent);
+            CrossFirebasePushNotification.Current.Subscribe(new string[] { "all" });
+
         }
         protected override void OnNewIntent(Intent intent)
         {

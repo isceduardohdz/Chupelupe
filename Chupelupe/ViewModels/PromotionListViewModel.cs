@@ -7,6 +7,7 @@ using System.Windows.Input;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
+using Chupelupe.Helpers;
 
 namespace Chupelupe.ViewModels
 {
@@ -30,7 +31,7 @@ namespace Chupelupe.ViewModels
             }
         }
 
-        public PromotionListViewModel(INavigation navigation) : base(navigation)
+        public PromotionListViewModel(INavigation navigation, IDependencyService dependencyService) : base(navigation, dependencyService)
         {
             GetPromotionsCommand = new Command(async (obj) =>
             await ExecuteGetPromotionsCommand(obj), (obj) => !IsBusy);

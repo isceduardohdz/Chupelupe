@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Chupelupe.Helpers;
 using Chupelupe.ViewModels;
 
 using Xamarin.Forms;
@@ -13,7 +14,7 @@ namespace Chupelupe.Views
         {
             InitializeComponent();
             //BindingContext = new PromotionListViewModel(Navigation);
-            _vm = new PromotionListViewModel(Navigation);
+            _vm = new PromotionListViewModel(Navigation, new DependencyServiceWrapper());
             BindingContext = _vm;
         }
 

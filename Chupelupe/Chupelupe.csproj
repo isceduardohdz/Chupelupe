@@ -23,5 +23,6 @@
     <Folder Include="ViewModels\Helpers\" />
     <Folder Include="Views\Controls\" />
     <Folder Include="CustomControls\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
 </Project>

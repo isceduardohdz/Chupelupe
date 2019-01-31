@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using Chupelupe.Helpers;
 using Chupelupe.Services;
 using Xamarin.Forms;
 
@@ -9,13 +10,17 @@ namespace Chupelupe.ViewModels.Helpers
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
+        public IDependencyService DependencyServiceWrapper { get; set; }
         public INavigation Navigation { get; set; }
         public IWebServiceApi WebApi { get; set; }
 
-        public BaseViewModel(INavigation navigation)
+        public BaseViewModel(INavigation navigation, IDependencyService dependencyService)
         {
+            DependencyServiceWrapper = dependencyService;
             Navigation = navigation;
-            WebApi = new WebServicesApi();
+            //WebApi = new WebServicesApi();
+
+            WebApi = DependencyServiceWrapper.Get<IWebServiceApi>();
         }
 
         protected bool SetValue<T>(ref T backingStore, T value,

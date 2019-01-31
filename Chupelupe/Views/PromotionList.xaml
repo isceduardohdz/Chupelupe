@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Chupelupe.Views.PromotionList"
+             >
+    <NavigationPage.TitleView>
+        <StackLayout
+            HorizontalOptions="StartAndExpand">
+            <Image
+                Source="ChupeLupe.png"
+                WidthRequest="80"
+                HeightRequest="40"
+                />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <StackLayout>
+        <ActivityIndicator 
+            IsVisible="{Binding IsBusy}"
+            IsRunning="true"
+            WidthRequest="20"
+            HeightRequest="20"
+            HorizontalOptions="CenterAndExpand"
+            Color="Black"
+        />
+        <ListView ItemsSource="{Binding ObjectList}"
+              CachingStrategy="RecycleElement"
+              RowHeight="60">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                        <StackLayout>
+                            <Label Text="{Binding Title}" />
+                            <Label Text="{Binding Detail}" />
+                        </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

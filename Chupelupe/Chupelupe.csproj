@@ -11,5 +11,17 @@
 
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.4.0.1029999" />
+    <PackageReference Include="FireSharp" Version="2.0.4" />
+    <PackageReference Include="Plugin.FirebasePushNotification" Version="2.3.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Models\Helpers\" />
+    <Folder Include="Services\" />
+    <Folder Include="Views\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="ViewModels\Helpers\" />
+    <Folder Include="Views\Controls\" />
+    <Folder Include="CustomControls\" />
   </ItemGroup>
 </Project>

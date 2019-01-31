@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "660741190415",
+    "firebase_url": "https://chupelupe-68b4c.firebaseio.com",
+    "project_id": "chupelupe-68b4c",
+    "storage_bucket": "chupelupe-68b4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:660741190415:android:067188ce3ff21a5f",
+        "android_client_info": {
+          "package_name": "com.companyname.Chupelupe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "660741190415-fobvadpofiigeg4afvvk30tlh477s43r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARF93ot_wbsD_blZrBn-KK5gnrwreVXmM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

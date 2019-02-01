@@ -4,6 +4,9 @@ using Xamarin.Forms.Xaml;
 using Chupelupe.Views;
 using Chupelupe.Views.Controls;
 using Plugin.FirebasePushNotification;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Chupelupe
@@ -58,7 +61,10 @@ namespace Chupelupe
 
         protected override void OnStart()
         {
-            // Handle when your app starts
+            AppCenter.Start("android=39da2a6e-898c-4ef2-b8e7-c0dc550e81f1;" +
+                  "uwp={Your UWP App secret here};" +
+                  "ios={Your iOS App secret here}",
+                  typeof(Analytics), typeof(Crashes));
         }
 
         protected override void OnSleep()

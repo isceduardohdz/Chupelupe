@@ -70,12 +70,14 @@
   <ItemGroup>
     <Compile Include="Test.cs" />
     <Compile Include="Helpers\DependencyServicesStub.cs" />
+    <Compile Include="ViewModels\PromotionListViewModelTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helpers\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Chupelupe\Chupelupe.csproj">

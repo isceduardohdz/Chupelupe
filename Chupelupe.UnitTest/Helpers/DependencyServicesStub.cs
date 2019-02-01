@@ -7,22 +7,22 @@ namespace Chupelupe.UnitTest.Helpers
 {
     public class DependencyServicesStub : IDependencyService
     {
-        readonly Dictionary<Type, object> registreredServices =
+        readonly Dictionary<Type, object> registeredServices =
             new Dictionary<Type, object>();
 
-        public void Registrer<T>(object impl)
+        public void Register<T>(object impl)
         {
-            if (registreredServices == null)
+            if (registeredServices == null)
             {
                 return;
             }
-            registreredServices[typeof(T)] = impl;
+            registeredServices[typeof(T)] = impl;
             
         }
 
         public T Get<T>() where T : class
         {
-            var service = (T)registreredServices[typeof(T)];
+            var service = (T)registeredServices[typeof(T)];
             return service;
         }
     }
